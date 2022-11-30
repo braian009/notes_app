@@ -2,13 +2,14 @@ import * as React from 'react'
 import axios from 'axios';
 
 import { useParams, useNavigate } from 'react-router-dom';
-import { ReactComponent as ArrowLeft } from '../assets/arrow-left.svg'
+import { ReactComponent as ArrowLeft } from '../../assets/arrow-left.svg'
+import NoteContainer from './NoteContainer';
 
 
 const URL = 'http://127.0.0.1:8000';
 
 
-const NotePage = () => {
+const NotePage = ({ token }) => {
   const { noteId } = useParams();
   const [note, setNote] = React.useState(null);
 
@@ -19,16 +20,17 @@ const NotePage = () => {
   }, [noteId,]);
 
   const getNote = async () => {
-    if (noteId === 'new') return setNote({body: null});
+    if (noteId === 'new') return setNote({body:''});
 
+    axios.defaults.headers.common['Authorization'] = 'Token ' + token;
     const result = await axios.get(`${URL}/api/v1/notes/${noteId}/`)
     const data = result.data;
-    console.log(data);
 
     setNote(data);
   };
 
   const createNote = async () => {
+    axios.defaults.headers.common['Authorization'] = 'Token ' + token;
     axios.post(`${URL}/api/v1/notes/create/`, {body: note.body}); 
     setTimeout(() => {
       navigate('/'); 
@@ -36,6 +38,7 @@ const NotePage = () => {
   }
 
   const editNote = async () => {
+    axios.defaults.headers.common['Authorization'] = 'Token ' + token;
     axios.put(`${URL}/api/v1/notes/${noteId}/edit/`, {body: note.body});    
     setTimeout(() => {
       navigate('/'); 
@@ -44,6 +47,7 @@ const NotePage = () => {
 
 
   const deleteNote = async () => {
+    axios.defaults.headers.common['Authorization'] = 'Token ' + token;
     axios.delete(`${URL}/api/v1/notes/${noteId}/delete/`);
 
     setTimeout(() => {
@@ -69,7 +73,7 @@ const NotePage = () => {
 
 
   return (
-    <div className='note'>
+    <NoteContainer>
       <div className='note-header'>
         <h3>
           <ArrowLeft onClick={handleSubmit}/>
@@ -80,8 +84,8 @@ const NotePage = () => {
           <button onClick={handleSubmit}>Done</button>
         )}
       </div>
-      <textarea value={note?.body} onChange={(e) => setNote({...note, body: e.target.value})}></textarea>
-    </div>
+      <textarea autoFocus value={note? note.body : ''} onChange={(e) => setNote({...note, body: e.target.value})}></textarea>
+    </NoteContainer>
   );
 };
 
