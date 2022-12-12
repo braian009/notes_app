@@ -13,7 +13,6 @@ import axios from "axios";
 const URL = "http://127.0.0.1:8000";
 
 function App() {
-  console.log('a');
   const navigate = useNavigate();
 
   const [error, setError] = React.useState("");
@@ -101,8 +100,8 @@ function App() {
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  color: var(--white-font-1);
+  background-color: var(--black-bg);
   display: flex;
   align-items: center;
 
@@ -111,9 +110,9 @@ const Container = styled.div`
     max-width: 480px;
     height: 90vh;
     margin: 0 auto;
-    background-color: var(--color-white);
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--lighter-black);
     position: relative;
+
 
     .app-body {
       padding: 16px;

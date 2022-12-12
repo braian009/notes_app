@@ -3,9 +3,9 @@ import styled from "styled-components";
 const NoteContainer = styled.div`
 .note-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  color: var(--color-main);
+  align-items: center;
+  color: var(--orange-main);
   padding: 0.625em;
 }
 
@@ -17,17 +17,17 @@ const NoteContainer = styled.div`
 }
 
 .note-header h3 svg {
-  fill: var(--color-main);
+  fill: var(--orange-main);
   width: 20px;
-  margin-right: 8px;
+  margin-right: .5em;
 }
 
 .note-header button {
-  border: none;
-  outline: none;
+  font-size: 1.125rem;
   font-weight: 600;
   background-color: transparent;
-  font-size: 1.125em;
+  border: none;
+  outline: none;
   cursor: pointer;
 }
 

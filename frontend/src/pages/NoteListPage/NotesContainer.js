@@ -10,30 +10,30 @@ const NotesContainer = styled.div`
 
   .notes-title,
   .notes-count {
-    color: var(--color-main);
+    color: var(--orange-main);
     font-size: 1.45em;
     font-weight: 600;
   }
 
   .notes-count {
     font-size: 1.25em;
-    color: var(--color-gray);
+    color: var(--gray-primary);
   }
 
   .note-list {
-    margin: 1em 0;
+    margin: 0;
     height: 70vh;
     overflow-y: auto;
   }
 
   .note-list-item {
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--black-darker);
     padding: 8px 16px;
     transition: all 0.2s ease-in-out;
   }
 
   .note-list-item:hover {
-    background-color: var(--color-bg);
+    background-color: var(--black-bg);
     cursor: pointer;
   }
 
@@ -43,14 +43,14 @@ const NotesContainer = styled.div`
   }
 
   .note-list-item p span {
-    color: var(--color-gray);
+    color: var(--gray-primary);
     display: inline-block;
     margin-right: 8px;
   }
 
   .note-list-item p {
     font-size: 14px;
-    color: var(--color-light);
+    color: var(--gray-secondary);
   }
 `;
 

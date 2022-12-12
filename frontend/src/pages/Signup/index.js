@@ -39,12 +39,34 @@ const Signup = ({ signup }) => {
         <div className="signup-title">Sign Up</div>
       </div>
       <Form>
-        <label htmlFor="username">Username</label>
-        <input id="username" type="text" onChange={onChangeUsername} />
-        <label htmlFor="password1">Password 1</label>
-        <input id="password1" type="password" onChange={onChangePassword1} />
-        <label htmlFor="password1">Password 2</label>
-        <input id="password2" type="password" onChange={onChangePassword2} />
+        <div className="form-group">
+          <label htmlFor="username">Username</label>
+          <input
+            required
+            id="username"
+            type="text"
+            onChange={onChangeUsername}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password1">Password 1</label>
+          <input
+            required
+            id="password1"
+            type="password"
+            onChange={onChangePassword1}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password1">Password 2</label>
+          <input
+            required
+            id="password2"
+            type="password"
+            onChange={onChangePassword2}
+          />
+        </div>
+
         <button type="submit" onClick={handleSubmit}>
           Sign Up
         </button>
@@ -63,7 +85,7 @@ const SignupContainer = styled.div`
   }
 
   .signup-title {
-    color: var(--color-main);
+    color: var(--orange-main);
     font-size: 1.45em;
     font-weight: 600;
   }
@@ -71,7 +93,7 @@ const SignupContainer = styled.div`
   .signup-error {
     margin-top: 1.5em;
     text-align: center;
-    color: var(--color-red);
+    color: var(--red);
   }
 `;
 

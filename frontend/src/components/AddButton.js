@@ -14,26 +14,27 @@ function AddButton() {
 }
 
 const FloatingButton = styled.div`
-  font-size: 48px;
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1rem;
-  background: var(--color-main);
-  border: none;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  width: 1.85em;
+  height: 1.85em;
+  font-size: 2rem;
+
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1rem;
+  background-color: var(--orange-main);
+  border: none;
+  border-radius: 50%;
+
   cursor: pointer;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 
-
- svg {
-  fill: var(--color-bg);
-}
-
+  svg {
+    fill: var(--black-bg);
+  }
 `;
 
 export default AddButton;

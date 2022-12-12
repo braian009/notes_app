@@ -17,26 +17,27 @@ const Header = ({ user, onLogout }) => {
 
 const HeaderContainer = styled.div`
   display: flex;
-  align-items: center;
-  padding: 16px;
   justify-content: space-between;
-  background-color: var(--black-light);
+  align-items: center;
+  padding: 1.5em 1em;
+  background-color: var(--black-middle);
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 
   h1 {
-    font-size: 2em;
-    color: var(--color-dark);
+    font-size: 2rem;
+    color: var(--white-font-2);
     font-weight: 800;
     text-align: center;
   }
   
   button {
-    font-size: 0.9em;
-    color: var(--color-gray);
+    font-size: 0.9rem;
+    background: none;
+    color: var(--gray-primary);
     font-weight: bold;
     text-align: center;
     outline: none;
-    background: none;
   }
 
   button {
@@ -46,7 +47,7 @@ const HeaderContainer = styled.div`
   }
 
   button > svg {
-    fill: var(--color-dark);
+    fill: var(--white-font-2);
     height: 25px;
     width: 25px;
     object-fit: cover;
