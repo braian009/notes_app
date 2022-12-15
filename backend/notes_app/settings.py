@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
     'allauth',
     'allauth.account',
-    'allautn.socialaccount',
+    'allauth.socialaccount',
 
     #local
     'api.apps.ApiConfig',
