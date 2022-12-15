@@ -4,7 +4,7 @@ import ItemList from '../../components/ItemList';
 import AddButton from '../../components/AddButton';
 import NotesContainer from './NotesContainer';
 
-const URL = 'http://127.0.0.1:8000';
+const URL = 'https://braian009.pythonanywhere.com';
 
 const NoteListPage = ({ token }) => {
 

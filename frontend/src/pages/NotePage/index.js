@@ -6,7 +6,7 @@ import { ReactComponent as ArrowLeft } from '../../assets/arrow-left.svg'
 import NoteContainer from './NoteContainer';
 
 
-const URL = 'http://127.0.0.1:8000';
+const URL = 'https://braian009.pythonanywhere.com';
 
 
 const NotePage = ({ token }) => {
