@@ -31,7 +31,7 @@ DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'localhost:8000',
+    'localhost',
     'braian009.pythonanywhere.com',
 ]
 
@@ -167,10 +167,11 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://localhost:8000',
     'https://braian009.pythonanywhere.com',
-    'https://notes-app-27a7e.web.app',
+    'https://notes-app-444.web.app',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
-    'https://notes-app-27a7e.web.app',
+    'http://127.0.0.1:3000',
+    'https://notes-app-444.web.app',
 ]

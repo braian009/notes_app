@@ -10,7 +10,8 @@ import Signup from "./pages/Signup";
 import ProtectedRoute from "./components/ProtectedRoute";
 import axios from "axios";
 
-const URL = "https://braian009.pythonanywhere.com";
+
+const URL = 'https://braian009.pythonanywhere.com';
 
 function App() {
   const navigate = useNavigate();
